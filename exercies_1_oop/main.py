@@ -49,6 +49,11 @@ while True:
         else:
             yeni_kayit = input("Giriş yapmış bulunmaktasınız. Kayıt işlemi gerçekleştirmek isterseniz önce çıkış yapmalısınız, onaylıyorsanız -evet- yazınız...\n")
             if yeni_kayit == "evet":
+                operations.giris_yapti = False
+                operations.giris_yapan_kullanici = {}
+                print("başarı ile çıkış yapıldı, tekrar seçim yapabilir veya programı sonlandırabilirisiniz...")
+            else:
+                print(f"oturumdan çıkış yapılamadı... bulunduğunuz oturum: {operations.giris_yapan_kullanici}")
                 
             
     elif secim == "3":
